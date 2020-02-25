@@ -1,4 +1,4 @@
-# Webpack Shopify Theme Development Tool
+# 👷🏼‍♂️ Webpack Shopify Theme Development Tool
 
 **This Webpack config was created to replace Slate by Shopify. This workflow functions similiarly to Theme Kit but offers you the ability to use modern Javascript and create template specific JS and CSS bundles.**
 

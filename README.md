@@ -12,6 +12,24 @@
 3. If migrating an existing theme, upload assets and replace liquid files with your theme's code.
 4. Run `npm start` to run your first Webpack build and start watching for file changes to be uploaded to Shopify.
 
+## Configuration
+
+### Webpack
+
+#### Entry Points
+All javascript files in the `js/bundles` directory are used as entry points. All other javascript modules should added to additional subdirectories of `js/`. An entry point file must be created for each liquid template file, including alternate templates. A CSS file for each template and layout should also be added to `styles/layout` and `styles/templates`. These CSS files should be imported at the top of each javascript entry file.
+
+#### Output Files
+Webpack will generate a javascript file for each template and layout file in the `bundles` directory. The CSS files imported in each bundle entry file will also generate CSS files. Webpack will add all output files to `dist/assets`.
+
+### Theme Kit
+
+#### Config
+The Theme Kit configuration file uses `dist` as the root directory.
+
+#### File Uploads
+When running `npm start`, Webpack will use a plugin that runs `shopify-themekit watch` after a successful build. Webpack will then be set to watch and recompile file changes, and Theme Kit will watch for file changes in the `dist` directory.
+
 ## Required Files
 - The `style-bundle.liquid` and `script-bundle.liquid` snippets output dynamic asset URLs based on current layout and template. These have been added to sample `theme.liquid`. If using Shopify Plus, render `style-bundle.liquid` in `<head>` and `script-bundle.liquid` before the closing `</body>` tag. The `layout` variable is required.
 - If using Shopify Plus, render these snippets in `checkout.liquid` by changing the snippet's layout variable to `checkout`. ie. `{% render 'style-bundle', layout: 'checkout' %}`.

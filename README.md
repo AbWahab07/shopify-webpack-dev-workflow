@@ -15,3 +15,8 @@
 ## Necessary Files
 - The `style-bundle.liquid` and `script-bundle.liquid` snippets output dynamic assets based on current layout and template. These have been added to sample `theme.liquid`. If using Shopify Plus, render `style-bundle.liquid` in `<head>` and `script-bundle.liquid` before the closing `</body>` tag.
 - If using Shopify Plus, render these snippets in `checkout.liquid` by changing the snippet's layout variable to `checkout`. ie. `{% render 'style-bundle', layout: 'theme' %}`.
+
+## Notes
+- Subdirectories are allowed in `assets/`, `js/`, `styles/`, `snippets/`.
+- A `Styles` module alias for the styles directory is ready to use. ie. `import "Styles/layout/theme.scss"`
+- A git pre-commit hook is installed that will run `webpack build` prior to the commit. This is useful if using a code deployment tool so that you never push and deploy an unbuilt theme.

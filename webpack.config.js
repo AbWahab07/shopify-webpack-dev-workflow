@@ -21,9 +21,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      Styles: path.resolve(__dirname, 'src/styles/'),
-      Components: path.resolve(__dirname, 'src/js/components/'),
-      Utils: path.resolve(__dirname, 'src/js/utils/'),
+      Styles: path.resolve(__dirname, 'src/styles/')
     }
   },
   plugins: [

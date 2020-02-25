@@ -1,1 +1,0 @@
-import "Styles/layout/checkout.scss";

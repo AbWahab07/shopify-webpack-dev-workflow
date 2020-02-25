@@ -1,6 +1,6 @@
-# Shopify Webpack Theme Development Tool
+# Webpack Shopify Theme Development Tool
 
-Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+**This Webpack config was created to replace Slate by Shopify. This workflow functions similiarly to Theme Kit but offers you the ability to use modern Javascript and create template specific JS and CSS bundles.**
 
 ## System Requirements
 - Node (Latest release)
@@ -10,4 +10,8 @@ Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
 1. Download this repo and run `npm install`.
 2. Update the `<PASSWORD>`, `THEME_ID`, and `STORE_URL` in **config.yml** with your store details.
 3. If migrating an existing theme, upload assets and replace liquid files with your theme's code.
-4. Run `npm start` to run your first webpack build and start watching for file changes to be uploaded to Shopify.
+4. Run `npm start` to run your first Webpack build and start watching for file changes to be uploaded to Shopify.
+
+## Necessary Files
+- `style-bundle.liquid` and `script-bundle.liquid` will create dynamic asset names based on current layout and template. These have already been added to `theme.liquid`. If using Shopify Plus, add `style-bundle.liquid` in `<head>` and `script-bundle.liquid` before the closing `</body>` tag.
+- If using Shopify Plus, render these snippets in `checkout.liquid` by changing the snippet's layout variable to `checkout`. ie. `{% render 'style-bundle', layout: 'theme' %}`.

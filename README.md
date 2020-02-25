@@ -38,3 +38,4 @@ When running `npm start`, Webpack will use a plugin that runs `shopify-themekit 
 - Subdirectories are allowed in `assets/`, `js/`, `styles/`, `snippets/`.
 - A `Styles` module alias for the styles directory is ready to use. ie. `import "Styles/layout/theme.scss"`
 - A git pre-commit hook is installed that will run `webpack build` prior to the commit. This is useful if using a code deployment tool so that you never push and deploy an unbuilt theme.
+- `clean-webpack-plugin` was intentionally not included to make incremental deployments faster using [Buddy](https://buddy.works/). If you remove a bundle entry file, you'll also need to delete the bundle files from `dist/assets`.

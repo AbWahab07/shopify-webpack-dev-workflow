@@ -1,6 +1,6 @@
-# 👷🏼‍♂️ Webpack Shopify Theme Development Tool
+# FORGE - A Modern Shopify Theme Development Tool
 
-**This Webpack config was created to replace Slate by Shopify. This workflow functions similiarly to Theme Kit but offers you the ability to use modern JavaScript and create template specific JS and CSS bundles.**
+**This Webpack config was created to replace Slate by Shopify. This workflow functions similiarly to Theme Kit but offers you the ability to use modern JavaScript and create template specific JS and CSS bundles. While it's possible to migrate an existing theme to this workflow, the intention and real benefit comes when new stores are built from scratch using this setup.**
 
 ## 🖥 System Requirements
 - [Node](https://nodejs.org/en/) (Latest release)

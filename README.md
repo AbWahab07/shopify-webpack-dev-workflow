@@ -50,4 +50,4 @@ A few issues with this workflow that I'd like to find a solution for:
 - Currently, if the same vendor module is imported in a layout and template entry file, that code will be included twice. How to split out vendor file imports but also make them available in the necessary modules.
 
 ## 🆕 Changelog
-Since there's currently no way send out automatic updates, I'll be posting updates here that will need to be done manually.
+Since this is not currently an NPM package, I'll be posting updates here that will need to be done manually.

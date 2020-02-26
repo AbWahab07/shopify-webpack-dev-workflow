@@ -1,6 +1,6 @@
 # 👷🏼‍♂️ Webpack Shopify Theme Development Tool
 
-**This Webpack config was created to replace Slate by Shopify. This workflow functions similiarly to Theme Kit but offers you the ability to use modern Javascript and create template specific JS and CSS bundles.**
+**This Webpack config was created to replace Slate by Shopify. This workflow functions similiarly to Theme Kit but offers you the ability to use modern JavaScript and create template specific JS and CSS bundles.**
 
 ## System Requirements 🖥
 - Node (Latest release)
@@ -8,19 +8,20 @@
 
 ## Getting Started 🎬
 1. Download this repo and run `npm install`.
-2. Update the `<PASSWORD>`, `THEME_ID`, and `STORE_URL` in **config.yml** with your store details.
-3. If migrating an existing theme, upload assets and replace liquid files with your theme's code.
-4. Run `npm start` to run your first Webpack build and start watching for file changes to be uploaded to Shopify.
+2. If starting a new theme from scratch, use [Theme Kit's 'new' command to generate a new theme on your store](https://shopify.github.io/themekit/commands/#new). After that theme has been uploaded to your store, copy the theme ID for the next step.
+3. Update the `<PASSWORD>`, `THEME_ID`, and `STORE_URL` in **config.yml** with your store & theme details.
+4. If migrating an existing theme, upload assets and replace liquid files with your theme's code.
+5. Run `npm start` to run your first Webpack build and start watching for file changes to be uploaded to Shopify.
 
 ## Configuration ⚙️
 
 ### Webpack
 
 #### Entry Points
-All javascript files in the `js/bundles` directory are used as entry points. All other javascript modules should added to additional subdirectories of `js/`. An entry point file must be created for each liquid template file, including alternate templates. A CSS file for each template and layout should also be added to `styles/layout` and `styles/templates`. These CSS files should be imported at the top of each javascript entry file.
+All JavaScript files in the `js/bundles` directory & subdirectories are used as entry points. All other JavaScript modules should added to additional subdirectories of `js/`. An entry point file must be created for each liquid template file, including alternate templates. A CSS file for each template and layout should also be added to `styles/layout` and `styles/templates`. These CSS files should be imported at the top of each JavaScript entry file.
 
 #### Output Files
-Webpack will generate a javascript file for each template and layout file in the `bundles` directory. The CSS files imported in each bundle entry file will also generate CSS files. Webpack will add all output files to `dist/assets`.
+Webpack will generate a JavaScript file for each template and layout file in the `bundles` directory. The CSS files imported in each bundle entry file will also generate CSS files. Webpack will add all output files to `dist/assets`.
 
 ### Theme Kit
 

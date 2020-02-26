@@ -39,6 +39,7 @@ When running `npm start`, Webpack will use a plugin that runs `shopify-themekit 
 ## 📝 Notes
 - Subdirectories are allowed in `assets/`, `js/`, `styles/`, `snippets/`.
 - A `Styles` module alias for the styles directory is ready to use. ie. `import "Styles/layout/theme.scss"`.
+- To reference an asset url in an SCSS file such as a background image, just use `./filename.ext`, since all final CSS and images live in the `dist/assets/` directory.
 - If you add a new JavaScript entry file to `js/bundles/` while Webpack and Theme Kit are watching for changes, you'll need to end the process and run `npm start` again so that Webpack is aware of the new entry file.
 - A git pre-commit hook is installed that will run `webpack build` prior to the commit. This is useful if using a code deployment tool so that you never push and deploy an unbuilt theme.
 - `clean-webpack-plugin` was intentionally not included to make incremental deployments faster using [Buddy](https://buddy.works/). If you remove a bundle entry file, you'll also need to delete the bundle files from `dist/assets`.

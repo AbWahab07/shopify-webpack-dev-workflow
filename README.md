@@ -3,11 +3,12 @@
 **This Webpack config was created to replace Slate by Shopify. This workflow functions similiarly to Theme Kit but offers you the ability to use modern JavaScript and create template specific JS and CSS bundles.**
 
 ## System Requirements 🖥
-- Node (Latest release)
-- NPM 5+
+- [Node](https://nodejs.org/en/) (Latest release)
+- [NPM 5+](https://docs.npmjs.com/try-the-latest-stable-version-of-npm)
+- [Theme Kit](https://shopify.github.io/themekit/)
 
 ## Getting Started 🎬
-1. Download this repo and run `npm install`.
+1. Download this repo and run `npm install` to install all node packages.
 2. If starting a new theme from scratch, use [Theme Kit's 'new' command to generate a new theme on your store](https://shopify.github.io/themekit/commands/#new). After that theme has been uploaded to your store, copy the theme ID for the next step.
 3. Update the `<PASSWORD>`, `THEME_ID`, and `STORE_URL` in **config.yml** with your store & theme details.
 4. If migrating an existing theme, upload assets and replace liquid files with your theme's code.

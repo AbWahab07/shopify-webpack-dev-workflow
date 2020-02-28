@@ -16,6 +16,24 @@
 
 ## ⚙️ Configuration
 
+### NPM
+
+### Scripts
+**`npm start`**
+- Completes a Webpack build in **development** mode
+- Webpack begins watching for file changes
+- Theme Kit begins watching for file changes in `dist/`
+
+**`npm run build`**
+- Completes a Webpack build in **production** mode
+
+**`npm run deploy`**
+- Completes a Webpack build in **production** mode
+- Deploys and overwrites all theme files via Theme Kit
+
+**`npm run eslint`**
+- Lint all JavaScript files in `src/js`
+
 ### Webpack
 
 #### Entry Points
@@ -43,6 +61,7 @@ When running `npm start`, Webpack will use a plugin that runs `shopify-themekit 
 - If you add a new JavaScript entry file to `js/bundles/` while Webpack and Theme Kit are watching for changes, you'll need to end the process and run `npm start` again so that Webpack is aware of the new entry file.
 - A git pre-commit hook is installed that will run `webpack build` prior to the commit. This is useful if using a code deployment tool so that you never push and deploy an unbuilt theme.
 - `clean-webpack-plugin` was intentionally not included to make incremental deployments faster using [Buddy](https://buddy.works/). If you remove a bundle entry file, you'll also need to delete the bundle files from `dist/assets`.
+- If you update or swithc node versions using `nvm`, you may need to run `npm rebuild node-sass` to refresh node-sass for your current environment.
 
 ## 🚧 Under Construction
 A few issues with this workflow that I'm working on a solution for:

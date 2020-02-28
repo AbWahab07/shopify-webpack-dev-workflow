@@ -18,7 +18,7 @@
 
 ### NPM
 
-### Scripts
+#### Scripts
 `npm start`
 - Completes a Webpack build in **development** mode
 - Webpack begins watching for file changes

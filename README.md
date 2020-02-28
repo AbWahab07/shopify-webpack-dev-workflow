@@ -1,4 +1,4 @@
-# FORGE - A Modern Shopify Theme Development Tool
+# FORGE - A Modern Shopify Theme Development Tool v1.0
 
 **This Webpack config was created to replace Slate by Shopify. This workflow functions similiarly to Theme Kit but offers you the ability to use modern JavaScript and create template specific JS and CSS bundles. While it's possible to migrate an existing theme to this workflow, the intention and real benefit comes when new stores are built from scratch using this setup.**
 
@@ -9,9 +9,9 @@
 
 ## 🎬 Getting Started
 1. Download this repo and run `npm install` to install all node packages.
-2. If starting a new theme from scratch, use [Theme Kit's 'new' command to generate a new theme on your store](https://shopify.github.io/themekit/commands/#new). After that theme has been uploaded to your store, copy the theme ID for the next step.
+2. If starting a new theme from scratch, use [Theme Kit's 'new' command to generate a new theme on your store](https://shopify.github.io/themekit/commands/#new). After that theme has been uploaded to your store, copy the theme ID for the next step. The starter liquid files included in this repo are the same files you'll get down generating a new theme with Theme Kit.
 3. Update the `<PASSWORD>`, `THEME_ID`, and `STORE_URL` in **config.yml** with your store & theme details.
-4. If migrating an existing theme, upload assets and replace liquid files with your theme's code.
+4. If migrating an existing theme, copy over all assets, liquid and config files from your theme.
 5. Run `npm start` to run your first Webpack build and start watching for file changes to be uploaded to Shopify.
 
 ## ⚙️ Configuration

@@ -19,19 +19,19 @@
 ### NPM
 
 ### Scripts
-**`npm start`**
+`npm start`
 - Completes a Webpack build in **development** mode
 - Webpack begins watching for file changes
 - Theme Kit begins watching for file changes in `dist/`
 
-**`npm run build`**
+`npm run build`
 - Completes a Webpack build in **production** mode
 
-**`npm run deploy`**
+`npm run deploy`
 - Completes a Webpack build in **production** mode
 - Deploys and overwrites all theme files via Theme Kit
 
-**`npm run eslint`**
+`npm run eslint`
 - Lint all JavaScript files in `src/js`
 
 ### Webpack

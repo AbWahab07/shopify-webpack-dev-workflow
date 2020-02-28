@@ -52,7 +52,8 @@ When running `npm start`, Webpack will use a plugin that runs `shopify-themekit 
 
 ## ‼️ Required Files
 - The `style-bundle.liquid` and `script-bundle.liquid` snippets output dynamic asset URLs based on current layout and template. These have been added to sample `theme.liquid`. The `layout` variable is required.
-- If using Shopify Plus, render these snippets in `checkout.liquid` by changing the snippet's layout variable to `checkout`. ie. `{% render 'style-bundle', layout: 'checkout' %}`.
+- If your store is on Shopify Plus, render these snippets in `checkout.liquid` by changing the snippet's layout variable to `checkout`. ie. `{% render 'style-bundle', layout: 'checkout' %}`.
+- The layout and template entry files in `src/js/bundles/` are necessary to generate the CSS and JavaScript files for each template. Additional entry files will be required when creating new liquid templates or alternate templates, ie. `page.about.js`.
 
 ## 📝 Notes
 - Subdirectories are allowed in `assets/`, `js/`, `styles/`, `snippets/`.

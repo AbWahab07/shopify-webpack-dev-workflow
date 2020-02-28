@@ -9,7 +9,7 @@
 
 ## 🎬 Getting Started
 1. Download this repo and run `npm install` to install all node packages.
-2. If starting a new theme from scratch, use [Theme Kit's 'new' command to generate a new theme on your store](https://shopify.github.io/themekit/commands/#new). After that theme has been uploaded to your store, copy the theme ID for the next step. The starter liquid files included in this repo are the same files you'll get down generating a new theme with Theme Kit.
+2. If starting a new theme from scratch, use [Theme Kit's 'new' command to generate a new theme on your store](https://shopify.github.io/themekit/commands/#new). After that theme has been uploaded to your store, copy the theme ID for the next step. The starter liquid files included in this repo are the same files you'll get when generating a new theme with Theme Kit.
 3. Update the `<PASSWORD>`, `THEME_ID`, and `STORE_URL` in **config.yml** with your store & theme details.
 4. If migrating an existing theme, copy over all assets, liquid and config files from your theme.
 5. Run `npm start` to run your first Webpack build and start watching for file changes to be uploaded to Shopify.

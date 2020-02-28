@@ -54,7 +54,7 @@ When running `npm start`, Webpack will use a plugin that runs `shopify-themekit 
 - The layout and template entry files in `src/js/bundles/` are necessary for Webpack to generate the CSS and JavaScript assets for each layout and template. Additional entry files will be required when creating new liquid templates or alternate templates, ie. `page.about.js`.
 - The `style-bundle.liquid` and `script-bundle.liquid` snippets output dynamic asset URLs based on current layout and template. These have been added to sample `theme.liquid`. The `layout` variable is required.
 
-## Shopify Plus Stores
+### Shopify Plus Stores
 If your store is on Shopify Plus, you'll to do the following:
 - Create `checkout.scss` and add to `src/styles/layout/`.
 - Create `checkout.js` and add to `src/js/bundles/layout/`.

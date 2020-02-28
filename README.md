@@ -51,9 +51,15 @@ The Theme Kit configuration file uses `dist` as the root directory.
 When running `npm start`, Webpack will use a plugin that runs `shopify-themekit watch` after a successful build. Webpack will then be set to watch and recompile file changes, and Theme Kit will watch for file changes in the `dist` directory.
 
 ## ‼️ Required Files
+- The layout and template entry files in `src/js/bundles/` are necessary for Webpack to generate the CSS and JavaScript assets for each layout and template. Additional entry files will be required when creating new liquid templates or alternate templates, ie. `page.about.js`.
 - The `style-bundle.liquid` and `script-bundle.liquid` snippets output dynamic asset URLs based on current layout and template. These have been added to sample `theme.liquid`. The `layout` variable is required.
-- If your store is on Shopify Plus, render these snippets in `checkout.liquid` by changing the snippet's layout variable to `checkout`. ie. `{% render 'style-bundle', layout: 'checkout' %}`.
-- The layout and template entry files in `src/js/bundles/` are necessary to generate the CSS and JavaScript files for each template. Additional entry files will be required when creating new liquid templates or alternate templates, ie. `page.about.js`.
+
+## Shopify Plus Stores
+If your store is on Shopify Plus, you'll to do the following:
+- Create `checkout.scss` and add to `src/styles/layout/`.
+- Create `checkout.js` and add to `src/js/bundles/layout/`.
+- Add `import "Styles/layout/checkout.scss";` to `checkout.js`.
+- Render these snippets in `checkout.liquid` by changing the snippet's layout variable to `checkout`. ie. `{% render 'style-bundle', layout: 'checkout' %}` and `{% render 'script-bundle', layout: 'checkout' %}`.
 
 ## 📝 Notes
 - Subdirectories are allowed in `assets/`, `js/`, `styles/`, `snippets/`.

@@ -23,6 +23,7 @@
 - Completes a Webpack build in **development** mode
 - Webpack begins watching for file changes
 - Theme Kit begins watching for file changes in `dist/`
+- Theme Kit opens your development theme in your default browser
 
 `npm run build`
 - Completes a Webpack build in **production** mode

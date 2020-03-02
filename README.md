@@ -78,3 +78,6 @@ A few issues with this workflow that I'm working on a solution for:
 
 ## 🆕 Changelog
 Since this is not currently an NPM package, I'll be posting updates here that will need to be done manually.
+
+#### March 2, 2020
+- Adds `@babel/plugin-transform-runtime` dev dependency, and adds `"plugins": ["@babel/plugin-transform-runtime"]` to `.babelrc`

@@ -80,4 +80,7 @@ A few issues with this workflow that I'm working on a solution for:
 Since this is not currently an NPM package, I'll be posting updates here that will need to be done manually.
 
 #### March 2, 2020
-- Adds `@babel/plugin-transform-runtime` dev dependency, and adds `"plugins": ["@babel/plugin-transform-runtime"]` to `.babelrc`
+- Adds `@babel/plugin-transform-runtime` dev dependency, and adds `"plugins": ["@babel/plugin-transform-runtime"]` to `.babelrc`.
+
+#### March 10, 2020
+- Fixes bug with account page style and JavaScript bundles. Updates the `style-bundle.liquid` and `script-bundle.liquid` snippets to remove `customers/` from the asset URL output as this is not included in the filename that webpack generates.

@@ -84,3 +84,7 @@ Since this is not currently an NPM package, I'll be posting updates here that wi
 
 #### March 10, 2020
 - Fixes bug with account page style and JavaScript bundles. Updates the `style-bundle.liquid` and `script-bundle.liquid` snippets to remove `customers/` from the asset URL output as this is not included in the filename that webpack generates.
+
+#### March 23, 2020
+- Moves `templates/`, `sections/`, `snippets/` and `layout/` directories into a `liquid/` directory in `src/`.
+- Updates copy plugin in `webpack.config.js` to accommodate the new liquid directory structure.

@@ -36,16 +36,16 @@ module.exports = {
           'src/js/**/*',
           'src/styles/**/*',
           'src/assets/**/*',
-          'src/templates/customers/*',
-          'src/snippets/**/*'
+          'src/liquid/templates/customers/*',
+          'src/liquid/snippets/**/*'
         ],
       },
       {
-        from: 'src/templates/customers/*.liquid',
+        from: 'src/liquid/templates/customers/*.liquid',
         to: 'templates/[folder]/[name].[ext]',
       },
       {
-        from: 'src/snippets/**/*.liquid',
+        from: 'src/liquid/snippets/**/*.liquid',
         to: 'snippets/[name].[ext]',
         flatten: true
       },
@@ -97,7 +97,7 @@ if (mode === 'development') {
         scripts: ['echo Webpack build in progress...🛠'],
       }, 
       onBuildEnd:{
-        scripts: ['echo Build Complete 📦','shopify-themekit watch','shopify-themekit open --env=development'],
+        scripts: ['echo Build Complete 📦','shopify-themekit watch','shopify-themekit open'],
         parallel: true
       }
     })

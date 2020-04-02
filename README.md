@@ -14,8 +14,8 @@
 4. Add the following to the `config.yml` file: 
     ```
     directory: dist/
-     ignore_files:
-        - config/settings_data.json
+    ignore_files:
+      - config/settings_data.json
     ```
 5. If migrating an existing theme, copy over all assets, liquid and config files from your theme.
 6. Run `npm start` to run your first Webpack build and start watching for file changes to be uploaded to Shopify.
